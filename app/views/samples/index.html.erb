@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Samples" %>
+
+<h1>Samples</h1>
+
+<div id="samples">
+  <table>
+    <% @samples.each do |sample| %>
+      <tr>
+        <td><%= link_to sample.title, sample %></td>
+        <td><%= button_to "edit", edit_sample_path(sample), method: :get %>
+        <td><%= button_to "destroy", sample, method: :delete %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+
+<%= link_to "New sample", new_sample_path %>

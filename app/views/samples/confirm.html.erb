@@ -1,0 +1,13 @@
+<% content_for :title, "Editing sample" %>
+
+<h1>Confirm sample</h1>
+
+<%= form_with(model: @sample) do |form| %>
+  <%= render partial: "form_confirm", locals: {form: form} %>
+<% end %>
+
+<br>
+
+<div>
+  <%= link_to "Back to samples", samples_path %>
+</div>
